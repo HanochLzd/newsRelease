@@ -4,7 +4,6 @@ import cn.soft.news.po.TbTheme;
 import cn.soft.news.utils.C3P0Util;
 import cn.soft.news.utils.DBUtil;
 
-import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
