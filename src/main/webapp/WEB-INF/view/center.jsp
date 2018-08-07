@@ -54,9 +54,9 @@ height: 1px;border: 1px solid rgb(67, 177, 252)"></div>
 
     <div class="div-theme" style="margin-left: 50px">
         <ul class="ul-themes">
-            <c:forEach var="theme" items="${themes}" begin="1" end="15">
+            <c:forEach var="theme" items="${themes}" begin="0" end="15">
                 <li class="li-theme">
-                    <a href="">${theme.themeName}</a>
+                    <a href="${ctx}/newsInGroup?themeId=${theme.themeId}">${theme.themeName}</a>
                 </li>
             </c:forEach>
             <li class="dropdown dropdown-hover li-theme">
@@ -89,7 +89,6 @@ height: 1px;border: 1px solid rgb(67, 177, 252)"></div>
         <div class="box" id="box" style="float: left"></div>
     </div>
     <script>
-
         (function ($, window, document) {
             // 定义构造函数
             function Paging(el, options) {
@@ -219,6 +218,10 @@ height: 1px;border: 1px solid rgb(67, 177, 252)"></div>
             }
         })(jQuery, window, document);
 
+        // function showNewsByGroup(themeId) {
+        //     alert(themeId);
+        // }
+
         $('#box').paging({
             initPageNo: 1, // 初始页码
             totalPages: ${totalPageCount}, //总页数
@@ -235,30 +238,31 @@ height: 1px;border: 1px solid rgb(67, 177, 252)"></div>
                         "json",
                     data:
                         {
-                            pageNo: page
-                        }
-                    ,
+                            pageNo: page,
+                            newsType: 0
+                        },
                     success: function (data) {
                         $("#ul-title")[0].innerHTML = "";
                         for (var i = 0; i < data.length; i++) {
-                            if (i < 5 && page === 1){
+                            if (i < 5 && page === 1) {
                                 $("#ul-title")[0].innerHTML += "<li class=\"list-group-item\" style=\"list-style: initial;font-size: 14px\"><a\n" +
                                     "href=\"${ctx}/showNews?newsId=" + data[i].newsId + "\"><b>" + data[i].newsTitle + "</b></a><span\n" +
                                     "style=\"float: right\">" + data[i].newsCreateTime + "</span></li>";
-                            }else {
+                            } else {
                                 $("#ul-title")[0].innerHTML += "<li class=\"list-group-item\" style=\"list-style: initial;font-size: 14px\"><a\n" +
                                     "href=\"${ctx}/showNews?newsId=" + data[i].newsId + "\">" + data[i].newsTitle + "</a><span\n" +
                                     "style=\"float: right\">" + data[i].newsCreateTime + "</span></li>";
                             }
                         }
-
                     },
-                    error: function (data) {
+                    error: function () {
                         console.log("error!");
                     }
                 })
                 ;
             }
         })
+
+
     </script>
 </div>

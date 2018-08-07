@@ -4,7 +4,6 @@ import cn.soft.news.dao.NewsDao;
 import cn.soft.news.dao.ThemeDao;
 import cn.soft.news.service.NewsService;
 import cn.soft.news.service.impl.NewsServiceImpl;
-import cn.soft.news.utils.C3P0Util;
 import cn.soft.news.vo.NewsVo;
 
 import javax.servlet.ServletException;
@@ -34,7 +33,7 @@ public class TestServlet extends HttpServlet {
         Map<String, List<NewsVo>> newsMap = newsDao.newsInTheme(2);
         req.setAttribute("newsMap", newsMap);
         req.setAttribute("themes", themeDao.queryAllTheme());
-        req.setAttribute("totalPageCount", newsService.getTotalPageCount());
+        req.setAttribute("totalPageCount", newsService.getTotalPageCount(0));
 //        req.setAttribute("newsList", newsDao.queryAllNews());
         req.getRequestDispatcher("WEB-INF/view/index.jsp").forward(req, resp);
     }

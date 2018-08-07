@@ -2,12 +2,15 @@ package cn.soft.news.dao;
 
 import cn.soft.news.po.TbTheme;
 import cn.soft.news.utils.C3P0Util;
+import cn.soft.news.utils.DBUtil;
 
+import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -16,6 +19,7 @@ import java.util.List;
 public class ThemeDao {
 
     private Connection connection = C3P0Util.getConnection();
+    private DBUtil dbUtil = new DBUtil();
 
     /**
      * 查询所有新闻主题
@@ -68,5 +72,26 @@ public class ThemeDao {
             e.printStackTrace();
         }
         return themes;
+    }
+
+    /**
+     * 查询指定ID的名字
+     *
+     * @param id id
+     * @return String
+     */
+    public String getThemeNameById(int id) {
+        String sql = "select theme_name from tb_theme where theme_id=?";
+        Object[] params = {id};
+        ResultSet rs = dbUtil.getResultSet(sql, Arrays.asList(params));
+        String themeName = null;
+        try {
+            while (rs.next()) {
+                themeName = rs.getString(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return themeName;
     }
 }

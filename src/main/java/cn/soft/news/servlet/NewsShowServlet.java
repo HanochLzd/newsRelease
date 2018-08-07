@@ -2,6 +2,7 @@ package cn.soft.news.servlet;
 
 import cn.soft.news.dao.NewsDao;
 import cn.soft.news.dao.PraiseDao;
+import cn.soft.news.dao.ThemeDao;
 import cn.soft.news.po.Praise;
 import cn.soft.news.service.NewsService;
 import cn.soft.news.service.impl.NewsServiceImpl;
@@ -18,14 +19,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Hanoch
  */
-@WebServlet(name = "NewsShowServlet", urlPatterns = {"/showNews", "/addPraise", "/newsPage"})
+@WebServlet(name = "NewsShowServlet", urlPatterns = {"/showNews", "/addPraise", "/newsPage", "/newsInGroup"})
 public class NewsShowServlet extends HttpServlet {
 
     private NewsDao newsDao = new NewsDao();
+
+    private ThemeDao themeDao = new ThemeDao();
 
     private PraiseDao praiseDao = new PraiseDao();
 
@@ -48,17 +52,35 @@ public class NewsShowServlet extends HttpServlet {
             case "/newsPage":
                 showNewsByPage(request, response);
                 break;
-//            case "/admin/news/edit":
-//                edit(request, response);
-//                break;
+            case "/newsInGroup":
+                newsInGroup(request, response);
+                break;
 //            case "/admin/news/editPage":
 //                editPage(request, response);
 //                break;
             default:
                 break;
-
-
         }
+    }
+
+    /**
+     * 显示某一类型的所有新闻
+     *
+     * @param request  request
+     * @param response response
+     */
+    private void newsInGroup(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int themeId = Integer.parseInt(request.getParameter("themeId"));
+        request.setAttribute("themeName", themeDao.getThemeNameById(themeId));
+        request.setAttribute("themeId", themeId);
+        //TODO 此处重复于TestServlet中的请求（可换成其它显示）
+        Map<String, List<NewsVo>> newsMap = newsDao.newsInTheme(2);
+        request.setAttribute("newsMap", newsMap);
+        request.setAttribute("themes", themeDao.queryAllTheme());
+        request.setAttribute("totalPageCount", newsService.getTotalPageCount(themeId));
+        //获取分组分页数据
+        request.setAttribute("pageInfo", "newsInGroup.jsp");
+        request.getRequestDispatcher("WEB-INF/view/index.jsp").forward(request, response);
     }
 
     /**
@@ -70,7 +92,8 @@ public class NewsShowServlet extends HttpServlet {
      */
     private void showNewsByPage(HttpServletRequest request, HttpServletResponse response) throws IOException {
         int pageNo = Integer.parseInt(request.getParameter("pageNo"));
-        PageUtil<NewsVo> pageUtil = newsService.queryByPage(pageNo);
+        int newsType = Integer.parseInt(request.getParameter("newsType"));
+        PageUtil<NewsVo> pageUtil = newsService.queryByPage(pageNo, newsType);
         List<NewsVo> newsVos = pageUtil.getNewsList();
         JSONArray jsonArray = new JSONArray();
         for (NewsVo newsVo : newsVos) {
@@ -92,7 +115,7 @@ public class NewsShowServlet extends HttpServlet {
 
     /**
      * @param request  request
-     * @param response
+     * @param response response
      */
     private void addPraise(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String newsId = request.getParameter("newsId");
@@ -101,7 +124,7 @@ public class NewsShowServlet extends HttpServlet {
         int type = Integer.parseInt(request.getParameter("type"));
         String ip = NetUtil.getIpAddress(request);
         newsDao.updateNewsInPraise(newsId, up, down);
-        praiseDao.addOnePraise(newsId,type, ip);
+        praiseDao.addOnePraise(newsId, type, ip);
         JSONObject result = new JSONObject();
         result.put("data", "success");
         response.getWriter().write(result.toJSONString());

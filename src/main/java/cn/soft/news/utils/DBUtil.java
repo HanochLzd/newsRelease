@@ -70,14 +70,15 @@ public class DBUtil {
      * @param sql   sql
      * @param param param
      */
-    private void getResultSet(String sql, List<Object> param) {
+    public ResultSet getResultSet(String sql, List<Object> param) {
         try {
             doSQL(sql, param);
             // 返回执行结果
-            resultSet = pstm.getResultSet();
+            return resultSet = pstm.getResultSet();
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return null;
     }
 
     /**

@@ -79,7 +79,7 @@
         </button>
     </form>
     <%--<i class="icon icon-spin icon-spinner-snake" style="float: right;margin-top: 8px"></i>--%>
-    <a href="https://github.com/">
+    <a href="https://github.com/HanochLzd/newsRelease">
         <i class="icon icon-github icon-2x" style="margin-top: 2px;margin-left:2px;float: right;"></i>
     </a>
     <span id="span-date" style="color: rgb(128, 128, 161);float: right;margin-top: 6px"></span>

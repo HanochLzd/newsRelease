@@ -6,6 +6,7 @@ import cn.soft.news.utils.DBUtil;
 import cn.soft.news.vo.NewsVo;
 import com.mysql.cj.jdbc.ConnectionGroupManager;
 
+import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -55,13 +56,20 @@ public class NewsDao {
 
 
     /**
-     * 获得总记录数
+     * 获得总记录数(某类或全部)
      *
      * @return
      */
-    public Long getCount() {
-        String sql = "select  count(news_id) from tb_news";
-        Object[] params = {};
+    public Long getCount(int themeId) {
+        String sql;
+        Object[] params;
+        if (0 == themeId) {
+            sql = "select  count(news_id) from tb_news";
+            params = new Object[]{};
+        } else {
+            sql = "select  count(news_id) from tb_news where news_theme_id=?";
+            params = new Object[]{themeId};
+        }
         try {
             List<Map<String, Object>> mapList = dbUtil.resultSet2List(sql, Arrays.asList(params));
             return (Long) mapList.get(0).get("count(news_id)");
@@ -80,11 +88,19 @@ public class NewsDao {
      * @param pageNo   当前页数
      * @return 当前页记录集
      */
-    public List<NewsVo> queryPage(int pageSize, long pageNo) {
-        String sql = "select news_id,news_theme_id,news_title,news_create_time " +
-                "from tb_news order by news_create_time desc limit ?,?;";
+    public List<NewsVo> queryPage(int pageSize, long pageNo, int newsType) {
+        String sql;
+        Object[] params;
+        if (newsType == 0) {
+            sql = "select news_id,news_theme_id,news_title,news_create_time " +
+                    "from tb_news order by news_create_time desc limit ?,?;";
+            params = new Object[]{(pageSize * (pageNo - 1)), pageSize};
+        } else {
+            sql = "select news_id,news_theme_id,news_title,news_create_time " +
+                    "from tb_news where news_theme_id=? order by news_create_time desc limit ?,?;";
+            params = new Object[]{newsType,(pageSize * (pageNo - 1)), pageSize};
+        }
         List<NewsVo> newsVoList = new ArrayList<>();
-        Object[] params = {(pageSize * (pageNo - 1)), pageSize};
 
         List<Map<String, Object>> mapList;
         try {
