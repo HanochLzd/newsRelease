@@ -91,4 +91,9 @@
             'insertunorderedlist', '|', 'emoticons', 'image', 'link'
         ]
     });
+    $(function () {
+        if (${message != null}) {
+            alert(message);
+        }
+    })
 </script>

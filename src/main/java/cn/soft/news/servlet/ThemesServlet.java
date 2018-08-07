@@ -1,6 +1,8 @@
 package cn.soft.news.servlet;
 
 import cn.soft.news.dao.ThemeDao;
+import cn.soft.news.dao.impl.ThemeDaoImpl;
+import cn.soft.news.plugin.TxProxy;
 import cn.soft.news.po.TbTheme;
 
 import javax.servlet.ServletException;
@@ -17,7 +19,7 @@ import java.util.List;
 @WebServlet(name = "ThemesServlet", urlPatterns = {"/admin/themes/queryAll", "/admin/themes/editPage"})
 public class ThemesServlet extends HttpServlet {
 
-    private ThemeDao themeDao = new ThemeDao();
+    private ThemeDao themeDao = (ThemeDao) TxProxy.bind(new ThemeDaoImpl());
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -50,10 +52,10 @@ public class ThemesServlet extends HttpServlet {
     /**
      * 显示所有主题
      *
-     * @param request
-     * @param response
-     * @throws ServletException
-     * @throws IOException
+     * @param request  request
+     * @param response response
+     * @throws ServletException ServletException
+     * @throws IOException      IOException
      */
     private void queryAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<TbTheme> themes = themeDao.queryAllTheme();

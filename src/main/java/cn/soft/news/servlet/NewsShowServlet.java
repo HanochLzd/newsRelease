@@ -3,6 +3,10 @@ package cn.soft.news.servlet;
 import cn.soft.news.dao.NewsDao;
 import cn.soft.news.dao.PraiseDao;
 import cn.soft.news.dao.ThemeDao;
+import cn.soft.news.dao.impl.NewsDaoImpl;
+import cn.soft.news.dao.impl.PraiseDaoImpl;
+import cn.soft.news.dao.impl.ThemeDaoImpl;
+import cn.soft.news.plugin.TxProxy;
 import cn.soft.news.po.Praise;
 import cn.soft.news.service.NewsService;
 import cn.soft.news.service.impl.NewsServiceImpl;
@@ -18,6 +22,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
@@ -27,11 +32,11 @@ import java.util.Map;
 @WebServlet(name = "NewsShowServlet", urlPatterns = {"/showNews", "/addPraise", "/newsPage", "/newsInGroup"})
 public class NewsShowServlet extends HttpServlet {
 
-    private NewsDao newsDao = new NewsDao();
+    private NewsDao newsDao = (NewsDao) TxProxy.bind(new NewsDaoImpl());
 
-    private ThemeDao themeDao = new ThemeDao();
+    private ThemeDao themeDao = (ThemeDao) TxProxy.bind(new ThemeDaoImpl());
 
-    private PraiseDao praiseDao = new PraiseDao();
+    private PraiseDao praiseDao = (PraiseDao) TxProxy.bind(new PraiseDaoImpl());
 
     private NewsService newsService = new NewsServiceImpl();
 
@@ -123,8 +128,12 @@ public class NewsShowServlet extends HttpServlet {
         int down = Integer.parseInt(request.getParameter("down"));
         int type = Integer.parseInt(request.getParameter("type"));
         String ip = NetUtil.getIpAddress(request);
-        newsDao.updateNewsInPraise(newsId, up, down);
-        praiseDao.addOnePraise(newsId, type, ip);
+        try {
+            newsDao.updateNewsInPraise(newsId, up, down);
+            praiseDao.addOnePraise(newsId, type, ip);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         JSONObject result = new JSONObject();
         result.put("data", "success");
         response.getWriter().write(result.toJSONString());

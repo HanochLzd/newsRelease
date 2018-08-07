@@ -1,7 +1,6 @@
 package cn.soft.news.listener;
 
 import cn.soft.news.utils.C3P0Util;
-import com.mchange.v2.c3p0.ComboPooledDataSource;
 import com.mchange.v2.c3p0.DataSources;
 
 import javax.servlet.ServletContextEvent;
@@ -11,8 +10,11 @@ import javax.servlet.http.HttpSessionAttributeListener;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 import javax.servlet.http.HttpSessionBindingEvent;
+import javax.sql.DataSource;
 
 /**
+ * 用于解决服务器关闭后C3P0未释放连接，但还是存在JDBC驱动未注销异常
+ *
  * @author Hanoch
  */
 @WebListener()
@@ -40,7 +42,7 @@ public class MyServletListener implements ServletContextListener,
          (the Web application) is undeployed or 
          Application Server shuts down.
       */
-        ComboPooledDataSource dataSource = C3P0Util.dataSource;
+        DataSource dataSource = C3P0Util.dataSource;
         try {
             //调用c3p0的关闭数据库连接的方法
             C3P0Util.getConnection().close();

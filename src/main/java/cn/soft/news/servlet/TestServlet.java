@@ -2,6 +2,9 @@ package cn.soft.news.servlet;
 
 import cn.soft.news.dao.NewsDao;
 import cn.soft.news.dao.ThemeDao;
+import cn.soft.news.dao.impl.NewsDaoImpl;
+import cn.soft.news.dao.impl.ThemeDaoImpl;
+import cn.soft.news.plugin.TxProxy;
 import cn.soft.news.service.NewsService;
 import cn.soft.news.service.impl.NewsServiceImpl;
 import cn.soft.news.vo.NewsVo;
@@ -19,8 +22,9 @@ import java.util.Map;
  */
 public class TestServlet extends HttpServlet {
 
-    private ThemeDao themeDao = new ThemeDao();
-    private NewsDao newsDao = new NewsDao();
+    private NewsDao newsDao = (NewsDao) TxProxy.bind(new NewsDaoImpl());
+
+    private ThemeDao themeDao = (ThemeDao) TxProxy.bind(new ThemeDaoImpl());
     private NewsService newsService = new NewsServiceImpl();
 
     @Override

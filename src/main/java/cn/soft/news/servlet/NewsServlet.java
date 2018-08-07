@@ -5,6 +5,9 @@ package cn.soft.news.servlet;
 
 import cn.soft.news.dao.NewsDao;
 import cn.soft.news.dao.ThemeDao;
+import cn.soft.news.dao.impl.NewsDaoImpl;
+import cn.soft.news.dao.impl.ThemeDaoImpl;
+import cn.soft.news.plugin.TxProxy;
 import cn.soft.news.vo.NewsVo;
 
 import javax.servlet.ServletException;
@@ -13,6 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -25,9 +29,9 @@ import java.util.UUID;
         "/admin/news/add", "/admin/news/edit", "/admin/news/editPage", "/admin/news/addPage"})
 public class NewsServlet extends HttpServlet {
 
-    private NewsDao newsDao = new NewsDao();
+    private NewsDao newsDao = (NewsDao) TxProxy.bind(new NewsDaoImpl());
 
-    private ThemeDao themeDao = new ThemeDao();
+    private ThemeDao themeDao = (ThemeDao) TxProxy.bind(new ThemeDaoImpl());
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -79,7 +83,7 @@ public class NewsServlet extends HttpServlet {
      * @param response response
      * @throws IOException IOException
      */
-    private void edit(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    private void edit(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String newsId = request.getParameter("newsId");
         int themeId = Integer.parseInt(request.getParameter("themeId"));
         String newsAuthor = request.getParameter("newsAuthor");
@@ -88,7 +92,11 @@ public class NewsServlet extends HttpServlet {
         Long newsUp = Long.valueOf(request.getParameter("newsUp"));
         Long newsDown = Long.valueOf(request.getParameter("newsDown"));
         NewsVo newsVo = new NewsVo(newsId, themeId, newsTitle, newsAuthor, newsContent, newsUp, newsDown);
-        newsDao.updateNews(newsVo);
+        try {
+            newsDao.updateNews(newsVo);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         response.sendRedirect(request.getContextPath() + "/admin/news/queryAll");
     }
 
@@ -108,7 +116,11 @@ public class NewsServlet extends HttpServlet {
         Date newsCreateTime = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         NewsVo newsVo = new NewsVo(newsId, newsThemeId, newsTitle, newsAuthor, newsContent, sdf.format(newsCreateTime));
-        newsDao.addOneNews(newsVo);
+        try {
+            newsDao.addOneNews(newsVo);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         response.sendRedirect(request.getContextPath() + "/admin/news/queryAll");
     }
 

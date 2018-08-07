@@ -1,6 +1,7 @@
 package cn.soft.news.service.impl;
 
 import cn.soft.news.dao.NewsDao;
+import cn.soft.news.dao.impl.NewsDaoImpl;
 import cn.soft.news.service.NewsService;
 import cn.soft.news.utils.PageUtil;
 import cn.soft.news.vo.NewsVo;
@@ -13,7 +14,7 @@ import java.util.List;
  */
 public class NewsServiceImpl implements NewsService {
 
-    private NewsDao newsDao = new NewsDao();
+    private NewsDao newsDao = new NewsDaoImpl();
     private final int pageSize = 15;
 
     @Override

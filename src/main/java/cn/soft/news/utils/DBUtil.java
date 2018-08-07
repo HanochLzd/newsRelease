@@ -47,21 +47,16 @@ public class DBUtil {
     }
 
     /**
-     * 获得结果
+     * 获得操作条数
      *
      * @param sql    sql
      * @param params params
      * @return int
      */
-    public int getCount(String sql, List<Object> params) {
-        try {
-            doSQL(sql, params);
-            //返回执行结果（操作数据的条数）
-            return pstm.getUpdateCount();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return 0;
+    public int getCount(String sql, List<Object> params) throws SQLException {
+        doSQL(sql, params);
+        //返回执行结果（操作数据的条数）
+        return pstm.getUpdateCount();
     }
 
     /**

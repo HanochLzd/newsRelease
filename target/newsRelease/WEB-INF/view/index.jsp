@@ -14,7 +14,8 @@
     <jsp:include page="include/commonfile.jsp"/>
     <style>
         body {
-            background-color: rgb(242, 242, 242);
+            /*background-color: rgb(242, 242, 242);*/
+            background: url("${ctx}/image/bg1.jpg") no-repeat;
         }
 
         #all {
@@ -65,7 +66,8 @@
     </style>
 </head>
 <body>
-<nav class="navbar navbar-default" role="navigation" style="min-height: 23px;margin-bottom: 0">
+<nav class="navbar navbar-default" role="navigation"
+     style="min-height: 23px;margin-bottom: 0;background-color: #3280fc00;border-color:#3280fc00 ">
     <form id="admin-form" class="navbar-form navbar-left" action="${ctx}/adminLogin" method="post">
         <div class="form-group">
             <input type="text" id="username" name="username" class="form-control" placeholder="用户名"
@@ -82,7 +84,7 @@
     <a href="https://github.com/HanochLzd/newsRelease">
         <i class="icon icon-github icon-2x" style="margin-top: 2px;margin-left:2px;float: right;"></i>
     </a>
-    <span id="span-date" style="color: rgb(128, 128, 161);float: right;margin-top: 6px"></span>
+    <span id="span-date" style="color: rgb(214, 227, 224);float: right;margin-top: 6px"></span>
 </nav>
 <div id="all">
     <div id="top">
@@ -104,9 +106,6 @@
         </c:choose>
     </div>
 </div>
-
-
-
 
 
 <script>
