@@ -116,29 +116,6 @@
 
             }
 
-            <%--var praise = $("#praise");--%>
-            <%--if (praise[0].style.color === "rgb(152, 138, 222)") {--%>
-            <%--praise[0].disabled = "disabled";--%>
-            <%--}--%>
-            <%--$("#praise").click(function () {--%>
-            <%--if (praise[0].style.color === "rgb(152, 138, 222)") {--%>
-            <%--praise[0].disabled = true;--%>
-            <%--} else {--%>
-            <%--$.ajax({--%>
-            <%--type: "POST",--%>
-            <%--url: '${ctx}/praise',--%>
-            <%--dataType: "json",--%>
-            <%--data: {--%>
-            <%--newsId: '${newsVo.newsId}'--%>
-            <%--},--%>
-            <%--success: function (data) {--%>
-            <%--console.log(data);--%>
-            <%--praise[0].disabled = true;--%>
-            <%--}--%>
-            <%--});--%>
-            <%--}--%>
-            <%--});--%>
-
         </script>
     </footer>
 </article>
