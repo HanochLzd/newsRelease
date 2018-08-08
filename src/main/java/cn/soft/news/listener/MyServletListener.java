@@ -42,7 +42,7 @@ public class MyServletListener implements ServletContextListener,
          (the Web application) is undeployed or 
          Application Server shuts down.
       */
-        DataSource dataSource = C3P0Util.dataSource;
+        DataSource dataSource = C3P0Util.getDataSource();
         try {
             //调用c3p0的关闭数据库连接的方法
             DataSources.destroy(dataSource);

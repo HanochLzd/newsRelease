@@ -14,7 +14,7 @@ import java.sql.SQLException;
  */
 public class C3P0Util {
 
-    public static DataSource dataSource;
+    private static DataSource dataSource;
 
     /**
      * ThreadLocal容器

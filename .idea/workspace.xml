@@ -6,12 +6,12 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c359b60-94eb-4ad1-99b4-d72ad0bef6ed" name="Default Changelist" comment="首页增加轮播图">
+    <list default="true" id="1c359b60-94eb-4ad1-99b4-d72ad0bef6ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/soft/news/listener/MyServletListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/soft/news/listener/MyServletListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/soft/news/plugin/TxProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/soft/news/plugin/TxProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/newsRelease.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/view/top.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/view/top.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/soft/news/utils/C3P0Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/soft/news/utils/C3P0Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/soft/news/listener/MyServletListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/soft/news/listener/MyServletListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/listener/MyServletListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/listener/MyServletListener.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -91,7 +91,7 @@
           <entry key="0-SNAPSHOT" value="1" />
           <entry key="class" value="28" />
           <entry key="css" value="8" />
-          <entry key="java" value="262" />
+          <entry key="java" value="267" />
           <entry key="jpg" value="1" />
           <entry key="js" value="22" />
           <entry key="jsp" value="147" />
@@ -109,7 +109,7 @@
           <entry key="CLASS" value="28" />
           <entry key="CSS" value="8" />
           <entry key="Image" value="3" />
-          <entry key="JAVA" value="262" />
+          <entry key="JAVA" value="267" />
           <entry key="JSP" value="147" />
           <entry key="JavaScript" value="22" />
           <entry key="Markdown" value="4" />
@@ -125,12 +125,12 @@
           <entry key="class" value="6" />
           <entry key="css" value="12" />
           <entry key="ft" value="1" />
-          <entry key="java" value="13612" />
+          <entry key="java" value="13643" />
           <entry key="js" value="15" />
           <entry key="jsp" value="7120" />
           <entry key="md" value="43" />
           <entry key="properties" value="13" />
-          <entry key="txt" value="125" />
+          <entry key="txt" value="131" />
           <entry key="xml" value="180" />
         </counts>
       </usages-collector>
@@ -138,11 +138,11 @@
         <counts>
           <entry key="CLASS" value="6" />
           <entry key="CSS" value="12" />
-          <entry key="JAVA" value="13608" />
+          <entry key="JAVA" value="13639" />
           <entry key="JSP" value="7120" />
           <entry key="JavaScript" value="15" />
           <entry key="Markdown" value="43" />
-          <entry key="PLAIN_TEXT" value="125" />
+          <entry key="PLAIN_TEXT" value="131" />
           <entry key="Properties" value="13" />
           <entry key="SQL" value="4" />
           <entry key="VTL" value="1" />
@@ -156,21 +156,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/soft/news/listener/MyServletListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/soft/news/plugin/TxProxy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="64" column="9" lean-forward="true" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
-              <folding>
-                <element signature="e#475#476#0" expanded="true" />
-                <element signature="e#505#506#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="21">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -255,7 +242,6 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/service/impl/NewsServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/servlet/TestServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/utils/C3P0Util.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/utils/DBUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/servlet/NewsShowServlet.java" />
@@ -279,6 +265,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/top.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/plugin/TxProxy.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/listener/MyServletListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/utils/C3P0Util.java" />
       </list>
     </option>
   </component>
@@ -503,14 +490,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="newsRelease" type="b2602c69:ProjectViewProjectNode" />
-              <item name="newsRelease" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -552,7 +531,7 @@
     <property name="DatabaseDriversLRU" value="hsqldb&#10;mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533716847276" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533719977701" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
@@ -987,7 +966,7 @@
       <workItem from="1533606433408" duration="776000" />
       <workItem from="1533607213967" duration="25340000" />
       <workItem from="1533688715939" duration="10190000" />
-      <workItem from="1533707927597" duration="8047000" />
+      <workItem from="1533707927597" duration="11397000" />
     </task>
     <task id="LOCAL-00001" summary="first commit by hanoch">
       <created>1533569952561</created>
@@ -1073,7 +1052,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533715808325</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="部分细节优化">
+      <created>1533716906446</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1533716906446</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1100,7 +1086,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260285000" />
+    <option name="totallyTimeSpent" value="263635000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1115,18 +1101,18 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8257143" visible="true" weight="0.211126" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7954887" visible="true" weight="0.19101876" />
       <window_info id="Structure" order="1" sideWeight="0.28267047" side_tool="true" weight="0.18498659" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.17428571" side_tool="true" visible="true" weight="0.211126" />
+      <window_info id="Web" order="7" sideWeight="0.20451128" side_tool="true" visible="true" weight="0.19101876" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.42351276" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.33333334" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.5035461" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.056737587" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5035461" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.35177305" />
@@ -1206,7 +1192,8 @@
     <MESSAGE value="完善功能" />
     <MESSAGE value="readme" />
     <MESSAGE value="首页增加轮播图" />
-    <option name="LAST_COMMIT_MESSAGE" value="首页增加轮播图" />
+    <MESSAGE value="部分细节优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="部分细节优化" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1328,13 +1315,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/soft/news/utils/C3P0Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -1556,10 +1536,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/soft/news/utils/C3P0Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#539#540#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
+            <element signature="e#1092#1093#0" expanded="true" />
+            <element signature="e#1119#1120#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/soft/news/plugin/TxProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="64" column="9" lean-forward="true" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+        <state relative-caret-position="41">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
             <element signature="e#475#476#0" expanded="true" />
             <element signature="e#505#506#0" expanded="true" />
@@ -1569,8 +1563,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/soft/news/listener/MyServletListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+        <state relative-caret-position="21">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
