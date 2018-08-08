@@ -54,7 +54,7 @@ height: 1px;border: 1px solid rgb(67, 177, 252)"></div>
 
     <div class="div-theme" style="margin-left: 50px">
         <ul class="ul-themes">
-            <c:forEach var="theme" items="${themes}" begin="0" end="15">
+            <c:forEach var="theme" items="${themes}" begin="0" end="23">
                 <li class="li-theme">
                     <a href="${ctx}/newsInGroup?themeId=${theme.themeId}">${theme.themeName}</a>
                 </li>
@@ -65,9 +65,9 @@ height: 1px;border: 1px solid rgb(67, 177, 252)"></div>
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a href="">探索</a></li>
-                    <li><a href="">另类</a></li>
-                    <li><a href="">更多操作</a></li>
+                    <c:forEach var="theme" items="${themes}" begin="23">
+                        <li><a href="${ctx}/newsInGroup?themeId=${theme.themeId}">${theme.themeName}</a></li>
+                    </c:forEach>
                 </ul>
             </li>
         </ul>

@@ -7,53 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c359b60-94eb-4ad1-99b4-d72ad0bef6ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/adminjsps/themeAdd.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/adminjsps/themesEdit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/soft/news/dao/NewsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/soft/news/dao/NewsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/soft/news/dao/PraiseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/soft/news/dao/PraiseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/soft/news/dao/ThemeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/soft/news/dao/ThemeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/soft/news/dao/impl/NewsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/soft/news/dao/impl/NewsDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/soft/news/dao/impl/PraiseDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/soft/news/dao/impl/PraiseDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/soft/news/dao/impl/ThemeDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/soft/news/dao/impl/ThemeDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/soft/news/po/TbTheme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/soft/news/po/TbTheme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/soft/news/servlet/ThemesServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/soft/news/servlet/ThemesServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/adminjsps/adminleft.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/adminjsps/adminleft.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/adminjsps/themes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/adminjsps/themes.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/center.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/center.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/soft/news/dao/NewsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/soft/news/dao/NewsDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/soft/news/dao/PraiseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/soft/news/dao/PraiseDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/soft/news/dao/ThemeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/soft/news/dao/ThemeDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/soft/news/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/soft/news/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/soft/news/listener/MyServletListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/soft/news/listener/MyServletListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/soft/news/po/TbTheme.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/soft/news/po/TbTheme.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/soft/news/service/impl/NewsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/soft/news/service/impl/NewsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/soft/news/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/soft/news/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/soft/news/servlet/NewsServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/soft/news/servlet/NewsServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/soft/news/servlet/NewsShowServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/soft/news/servlet/NewsShowServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/soft/news/servlet/TestServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/soft/news/servlet/TestServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/soft/news/servlet/ThemesServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/soft/news/servlet/ThemesServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/soft/news/utils/C3P0Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/soft/news/utils/C3P0Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/soft/news/utils/DBUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/soft/news/utils/DBUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/newsRelease.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/dao/NewsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/dao/NewsDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/dao/PraiseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/dao/PraiseDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/dao/ThemeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/dao/ThemeDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/listener/MyServletListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/listener/MyServletListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/po/TbTheme.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/po/TbTheme.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/service/impl/NewsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/service/impl/NewsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/servlet/NewsServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/servlet/NewsServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/servlet/NewsShowServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/servlet/NewsShowServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/servlet/TestServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/servlet/TestServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/servlet/ThemesServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/servlet/ThemesServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/utils/C3P0Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/utils/C3P0Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/utils/DBUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/classes/cn/soft/news/utils/DBUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/view/adminjsps/adminleft.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/view/adminjsps/adminleft.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/view/adminjsps/newsEdit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/view/adminjsps/newsEdit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/view/adminjsps/themes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/view/adminjsps/themes.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/view/center.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/view/center.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -136,7 +92,7 @@
           <entry key="jpg" value="1" />
           <entry key="js" value="22" />
           <entry key="jsp" value="144" />
-          <entry key="md" value="2" />
+          <entry key="md" value="3" />
           <entry key="png" value="2" />
           <entry key="pom" value="1" />
           <entry key="properties" value="8" />
@@ -153,7 +109,7 @@
           <entry key="JAVA" value="255" />
           <entry key="JSP" value="144" />
           <entry key="JavaScript" value="22" />
-          <entry key="Markdown" value="2" />
+          <entry key="Markdown" value="3" />
           <entry key="Properties" value="8" />
           <entry key="RNG Compact" value="1" />
           <entry key="Scratch" value="1" />
@@ -169,8 +125,9 @@
           <entry key="java" value="13593" />
           <entry key="js" value="15" />
           <entry key="jsp" value="6958" />
+          <entry key="md" value="43" />
           <entry key="properties" value="13" />
-          <entry key="txt" value="101" />
+          <entry key="txt" value="111" />
           <entry key="xml" value="180" />
         </counts>
       </usages-collector>
@@ -181,7 +138,8 @@
           <entry key="JAVA" value="13589" />
           <entry key="JSP" value="6958" />
           <entry key="JavaScript" value="15" />
-          <entry key="PLAIN_TEXT" value="101" />
+          <entry key="Markdown" value="43" />
+          <entry key="PLAIN_TEXT" value="111" />
           <entry key="Properties" value="13" />
           <entry key="SQL" value="4" />
           <entry key="VTL" value="1" />
@@ -191,7 +149,20 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="1407">
+                <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -243,7 +214,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/adminjsps/newsAdd.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/filter/AdminFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/utils/util/DBUtil.java" />
@@ -294,6 +264,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/adminjsps/themes.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/servlet/ThemesServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/center.jsp" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -559,7 +530,7 @@
     <property name="DatabaseDriversLRU" value="hsqldb&#10;mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533699182364" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533699587937" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
@@ -883,7 +854,7 @@
       <workItem from="1533603698441" duration="2220000" />
       <workItem from="1533606433408" duration="776000" />
       <workItem from="1533607213967" duration="25340000" />
-      <workItem from="1533688715939" duration="9642000" />
+      <workItem from="1533688715939" duration="10134000" />
     </task>
     <task id="LOCAL-00001" summary="first commit by hanoch">
       <created>1533569952561</created>
@@ -948,7 +919,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533646476888</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="完善功能">
+      <created>1533699210094</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1533699210094</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -975,7 +953,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="251690000" />
+    <option name="totallyTimeSpent" value="252182000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -990,8 +968,8 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7983425" visible="true" weight="0.25201073" />
-      <window_info id="Structure" order="1" sideWeight="0.20165746" side_tool="true" visible="true" weight="0.25201073" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.86015326" visible="true" weight="0.09115282" />
+      <window_info id="Structure" order="1" sideWeight="0.13984674" side_tool="true" visible="true" weight="0.09115282" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -1000,7 +978,7 @@
       <window_info id="Web" order="7" sideWeight="0.48510638" side_tool="true" weight="0.19168901" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.42351276" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.48652482" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.25957447" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1078,7 +1056,8 @@
     <MESSAGE value="添加新闻分类显示" />
     <MESSAGE value="优化显示" />
     <MESSAGE value="动态代理实现注解事务管理" />
-    <option name="LAST_COMMIT_MESSAGE" value="动态代理实现注解事务管理" />
+    <MESSAGE value="完善功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善功能" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1113,14 +1092,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1496,6 +1467,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="307" column="11" selection-start-line="307" selection-start-column="11" selection-end-line="307" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1407">
+            <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
