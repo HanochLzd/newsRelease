@@ -59,12 +59,10 @@ public class TxProxy implements InvocationHandler {
             assert con != null;
             con.rollback();
             System.err.println(method.getName() + "方法中事务回滚");
+        } finally {
+            assert con != null;
+            con.close();
         }
-//        finally {
-//            assert con != null;
-//            con.close();
-//            C3P0Util.remove();
-//        }
         return returnValue;
     }
 }

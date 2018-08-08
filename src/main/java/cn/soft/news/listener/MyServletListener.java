@@ -45,8 +45,8 @@ public class MyServletListener implements ServletContextListener,
         DataSource dataSource = C3P0Util.dataSource;
         try {
             //调用c3p0的关闭数据库连接的方法
-            C3P0Util.getConnection().close();
             DataSources.destroy(dataSource);
+            C3P0Util.remove();
         } catch (Exception e) {
             e.printStackTrace();
         }

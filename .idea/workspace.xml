@@ -6,15 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c359b60-94eb-4ad1-99b4-d72ad0bef6ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/image/20180808144129.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/image/20180808144744.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/image/cjgs.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/image/jubao_www_new.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/image/shggzcf_go.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1c359b60-94eb-4ad1-99b4-d72ad0bef6ed" name="Default Changelist" comment="首页增加轮播图">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/top.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/top.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/soft/news/listener/MyServletListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/soft/news/listener/MyServletListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/soft/news/plugin/TxProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/soft/news/plugin/TxProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/newsRelease.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/newsRelease/WEB-INF/view/top.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/newsRelease/WEB-INF/view/top.jsp" afterDir="false" />
     </list>
@@ -96,7 +91,7 @@
           <entry key="0-SNAPSHOT" value="1" />
           <entry key="class" value="28" />
           <entry key="css" value="8" />
-          <entry key="java" value="260" />
+          <entry key="java" value="262" />
           <entry key="jpg" value="1" />
           <entry key="js" value="22" />
           <entry key="jsp" value="147" />
@@ -114,7 +109,7 @@
           <entry key="CLASS" value="28" />
           <entry key="CSS" value="8" />
           <entry key="Image" value="3" />
-          <entry key="JAVA" value="260" />
+          <entry key="JAVA" value="262" />
           <entry key="JSP" value="147" />
           <entry key="JavaScript" value="22" />
           <entry key="Markdown" value="4" />
@@ -130,12 +125,12 @@
           <entry key="class" value="6" />
           <entry key="css" value="12" />
           <entry key="ft" value="1" />
-          <entry key="java" value="13593" />
+          <entry key="java" value="13612" />
           <entry key="js" value="15" />
           <entry key="jsp" value="7120" />
           <entry key="md" value="43" />
           <entry key="properties" value="13" />
-          <entry key="txt" value="117" />
+          <entry key="txt" value="125" />
           <entry key="xml" value="180" />
         </counts>
       </usages-collector>
@@ -143,11 +138,11 @@
         <counts>
           <entry key="CLASS" value="6" />
           <entry key="CSS" value="12" />
-          <entry key="JAVA" value="13589" />
+          <entry key="JAVA" value="13608" />
           <entry key="JSP" value="7120" />
           <entry key="JavaScript" value="15" />
           <entry key="Markdown" value="43" />
-          <entry key="PLAIN_TEXT" value="117" />
+          <entry key="PLAIN_TEXT" value="125" />
           <entry key="Properties" value="13" />
           <entry key="SQL" value="4" />
           <entry key="VTL" value="1" />
@@ -158,46 +153,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/soft/news/servlet/NewsServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="86" column="32" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/top.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/soft/news/listener/MyServletListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="137" column="26" lean-forward="true" selection-start-line="137" selection-start-column="26" selection-end-line="137" selection-end-column="26" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="107">
+              <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/center.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/soft/news/plugin/TxProxy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="87" column="16" lean-forward="true" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
+            <state relative-caret-position="357">
+              <caret line="64" column="9" lean-forward="true" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
               <folding>
-                <element signature="n#style#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+                <element signature="e#475#476#0" expanded="true" />
+                <element signature="e#505#506#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -285,13 +257,11 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/servlet/TestServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/utils/C3P0Util.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/listener/MyServletListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/utils/DBUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/servlet/NewsShowServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/adminjsps/newsEdit.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/servlet/NewsServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/plugin/TxProxy.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/adminjsps/themesEdit.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/po/TbTheme.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/adminjsps/adminleft.jsp" />
@@ -307,6 +277,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/center.jsp" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/top.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/plugin/TxProxy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/soft/news/listener/MyServletListener.java" />
       </list>
     </option>
   </component>
@@ -580,7 +552,7 @@
     <property name="DatabaseDriversLRU" value="hsqldb&#10;mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533715703634" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533716847276" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
@@ -1015,7 +987,7 @@
       <workItem from="1533606433408" duration="776000" />
       <workItem from="1533607213967" duration="25340000" />
       <workItem from="1533688715939" duration="10190000" />
-      <workItem from="1533707927597" duration="6908000" />
+      <workItem from="1533707927597" duration="8047000" />
     </task>
     <task id="LOCAL-00001" summary="first commit by hanoch">
       <created>1533569952561</created>
@@ -1094,7 +1066,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533699713063</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="首页增加轮播图">
+      <created>1533715808325</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1533715808325</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1121,7 +1100,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="259146000" />
+    <option name="totallyTimeSpent" value="260285000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1134,19 +1113,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.827856" visible="true" weight="0.19839142" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8257143" visible="true" weight="0.211126" />
       <window_info id="Structure" order="1" sideWeight="0.28267047" side_tool="true" weight="0.18498659" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
-      <window_info id="Web" order="7" sideWeight="0.17214398" side_tool="true" visible="true" weight="0.19839142" />
+      <window_info id="Web" order="7" sideWeight="0.17428571" side_tool="true" visible="true" weight="0.211126" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.42351276" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.09361702" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.33333334" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.5035461" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.35177305" />
@@ -1225,7 +1205,8 @@
     <MESSAGE value="动态代理实现注解事务管理" />
     <MESSAGE value="完善功能" />
     <MESSAGE value="readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme" />
+    <MESSAGE value="首页增加轮播图" />
+    <option name="LAST_COMMIT_MESSAGE" value="首页增加轮播图" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1371,13 +1352,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/soft/news/listener/MyServletListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1306">
-          <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/soft/news/utils/DBUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
@@ -1410,17 +1384,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/soft/news/plugin/TxProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="61" column="9" lean-forward="true" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
-          <folding>
-            <element signature="e#475#476#0" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1580,14 +1543,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/top.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="137" column="26" lean-forward="true" selection-start-line="137" selection-start-column="26" selection-end-line="137" selection-end-column="26" />
+        <state relative-caret-position="588">
+          <caret line="65" column="14" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="14" />
           <folding>
+            <element signature="e#242#1527#0#HTML" />
             <element signature="n#style#0;n#img#0;n#a#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#!!top" />
             <element signature="n#style#0;n#ul#0;n#div#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/soft/news/plugin/TxProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="64" column="9" lean-forward="true" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+          <folding>
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/soft/news/listener/MyServletListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
         </state>
       </provider>
     </entry>

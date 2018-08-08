@@ -33,11 +33,6 @@
     #lunbo-box .list-image li img {
         height: 135px;
     }
-
-    /*#lunbo-box .list-number li.current {*/
-        /*opacity: 1;*/
-        /*filter: alpha(opacity=100);*/
-    /*}*/
 </style>
 
 <a href="${pageContext.request.contextPath}/">
@@ -56,16 +51,11 @@
 <%--srcset="">--%>
 <div id="lunbo-box">
     <ul class="list-image" style="list-style: none;margin:0;border: 0;padding-top: 5px;">
-        <li><img
-                src="${pageContext.request.contextPath}/image/20180808144744.png" alt="AD" srcset=""></li>
-        <li><img
-                src="${pageContext.request.contextPath}/image/cjgs.jpg" alt="AD" srcset=""></li>
-        <li><img
-                src="${pageContext.request.contextPath}/image/myStore_1978.jpg" alt="AD" srcset=""></li>
-        <li><img
-                src="${pageContext.request.contextPath}/image/shggzcf_go.jpg" alt="AD" srcset=""></li>
-        <li><img
-                src="${pageContext.request.contextPath}/image/jubao_www_new.jpg" alt="AD" srcset=""></li>
+        <li><img src="${pageContext.request.contextPath}/image/20180808144744.png" alt="AD" srcset=""></li>
+        <li><img src="${pageContext.request.contextPath}/image/cjgs.jpg" alt="AD" srcset=""></li>
+        <li><img src="${pageContext.request.contextPath}/image/myStore_1978.jpg" alt="AD" srcset=""></li>
+        <li><img src="${pageContext.request.contextPath}/image/shggzcf_go.jpg" alt="AD" srcset=""></li>
+        <li><img src="${pageContext.request.contextPath}/image/jubao_www_new.jpg" alt="AD" srcset=""></li>
     </ul>
 </div>
 <script>
