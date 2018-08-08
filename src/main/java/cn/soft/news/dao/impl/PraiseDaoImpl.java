@@ -56,4 +56,10 @@ public class PraiseDaoImpl implements PraiseDao {
         Object[] params = {praiseId, type, newsId, ip};
         return dbUtil.getCount(sql, Arrays.asList(params));
     }
+
+    @Override
+    public int deletePraiseByNews(String newsId) {
+        return 0;
+    }
+
 }

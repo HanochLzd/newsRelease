@@ -104,4 +104,14 @@ public interface NewsDao {
      */
     @Tx
     int updateNewsInPraise(String newsId, int up, int down) throws SQLException;
+
+    /**
+     * 删除某主题下的所有新闻
+     *
+     * @param themeId
+     * @return
+     */
+    @Tx
+    int deleteNewsInGroup(int themeId) throws SQLException;
+
 }

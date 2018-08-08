@@ -23,8 +23,8 @@
             <a href="#"><i class="icon icon-th-list"></i>新闻类型</a>
             <ul>
                 <li><a href="${ctx}/admin/themes/queryAll">全部类型</a></li>
-                <li><a href="#">类型添加</a></li>
-                <li><a href="#">类型编辑</a></li>
+                <li><a href="${ctx}/admin/themes/addPage">类型添加</a></li>
+                <li><a href="${ctx}/admin/themes/editPage">类型编辑</a></li>
             </ul>
         </li>
         <li><a href="#"><i class="icon icon-trash"></i>垃圾篓</a></li>

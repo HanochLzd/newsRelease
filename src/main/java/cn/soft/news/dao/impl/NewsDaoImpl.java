@@ -287,7 +287,6 @@ public class NewsDaoImpl implements NewsDao {
                 "news_create_time=? where news_id=?";
         Object[] params = {newsVo.getNewsThemeId(), newsVo.getNewsAuthor(), newsVo.getNewsTitle(), newsVo.getNewsContent(), newsVo.getNewsDown(),
                 newsVo.getNewsUp(), new Date(), newsVo.getNewsId()};
-
         return dbUtil.getCount(sql, Arrays.asList(params));
     }
 
@@ -305,5 +304,19 @@ public class NewsDaoImpl implements NewsDao {
         Object[] params = {up, down, newsId};
         return dbUtil.getCount(sql, Arrays.asList(params));
     }
+
+    @Override
+    public int deleteNewsInGroup(int themeId) throws SQLException {
+        String sql = "delete from tb_news where news_theme_id=?";
+        Object[] params = {themeId};
+        return dbUtil.getCount(sql, Arrays.asList(params));
+    }
+
+//    @Override
+//    public int deleteOneTheme(int themeId) {
+//
+//
+//        return 0;
+//    }
 
 }

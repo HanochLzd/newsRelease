@@ -28,4 +28,6 @@ public interface PraiseDao {
      */
     @Tx
     int addOnePraise(String newsId, int type, String ip) throws SQLException;
+
+    int deletePraiseByNews(String newsId);
 }

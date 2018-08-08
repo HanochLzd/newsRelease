@@ -12,6 +12,32 @@
 <h1 class="header-dividing" style="float: left;margin-top: 0">新闻主题</h1>
 <div class="page-header" style="height: 1px"></div>
 <div id="example" style="width: 550px; height: 350px;"></div>
+<table class="table table-bordered" id="tableDataGridExample">
+    <thead>
+    <tr>
+        <th>主题编号</th>
+        <th>主题名称</th>
+        <th>主题描述</th>
+        <th>主题优先级</th>
+        <th>主题创建时间</th>
+        <th>操作</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <c:forEach var="theme" items="${themes}">
+        <tr>
+            <td>${theme.themeId}</td>
+            <td>${theme.themeName}</td>
+            <td>${theme.themeDetail}</td>
+            <td>${theme.themeLevel}</td>
+            <td>${theme.themeCreateTime}</td>
+            <td><a href="${ctx}/admin/themes/editPage?themeId=${theme.themeId}">编辑</a>|<a
+                    href="${ctx}/admin/themes/delete?themeId=${theme.themeId}" onclick="return confirm('请确认删除');">删除</a></td>
+        </tr>
+    </c:forEach>
+    </tbody>
+</table>
 <script>
     var word_array = [];
     <c:forEach var="theme" items="${themes}">
