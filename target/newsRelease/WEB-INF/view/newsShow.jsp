@@ -16,7 +16,7 @@
 
 <ol class="breadcrumb" style="float: left;margin-bottom: 0;color: rgb(133, 133, 133)">
     <li><i class="icon icon-home"></i><a href="${ctx}/" style="color: rgb(133, 133, 133)">主页</a></li>
-    <li><a href="" style="color: rgb(133, 133, 133)">${newsVo.newsThemeName}</a><i class="icon icon-map-marker"></i>
+    <li><a href="${ctx}/newsInGroup?themeId=${newsVo.newsThemeId}" style="color: rgb(133, 133, 133)">${newsVo.newsThemeName}</a><i class="icon icon-map-marker"></i>
     </li>
 </ol>
 <article class="article article-condensed">

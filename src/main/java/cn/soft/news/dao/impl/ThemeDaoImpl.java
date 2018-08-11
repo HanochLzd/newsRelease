@@ -129,7 +129,22 @@ public class ThemeDaoImpl implements ThemeDao {
 
     @Override
     public TbTheme qureyThemeByName(String themeName) {
-        return null;
+        String sql = "select * from tb_theme where theme_name=?";
+        Object[] param = {themeName};
+        ResultSet rs = dbUtil.getResultSet(sql, Arrays.asList(param));
+        TbTheme theme = new TbTheme();
+        try {
+            if (rs.next()) {
+                theme.setThemeId(rs.getInt(1));
+                theme.setThemeName(themeName);
+                theme.setThemeDetail(rs.getString(3));
+                theme.setThemeLevel(rs.getInt(4));
+                theme.setThemeCreateTime(rs.getTimestamp(5));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return theme;
     }
 
     @Override

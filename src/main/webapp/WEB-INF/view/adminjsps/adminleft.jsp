@@ -19,12 +19,12 @@
                 <li id="newsEdit"><a href="#">新闻编辑</a></li>
             </ul>
         </li>
-        <li id="themes">
+        <li id="themess">
             <a href="#"><i class="icon icon-th-list"></i>新闻类型</a>
             <ul>
-                <li><a href="${ctx}/admin/themes/queryAll">全部类型</a></li>
-                <li><a href="${ctx}/admin/themes/addPage">类型添加</a></li>
-                <li><a href="${ctx}/admin/themes/editPage">类型编辑</a></li>
+                <li id="themes"><a href="${ctx}/admin/themes/queryAll">全部类型</a></li>
+                <li id="themesAdd"><a href="${ctx}/admin/themes/addPage">类型添加</a></li>
+                <li id="themesEdit"><a href="${ctx}/admin/themes/editPage">类型编辑</a></li>
             </ul>
         </li>
         <li><a href="#"><i class="icon icon-trash"></i>垃圾篓</a></li>
@@ -53,12 +53,13 @@
     });
 
     $(function () {
-        var pageInfo = '${pageInfo}'.replace(".jsp", "");
-        var lis = $("#news").find("li");
-        for (var i = 0; i < lis.length; i++) {
+        let pageInfo = '${pageInfo}'.replace(".jsp", "");
+        let lis = $("#news li");
+        // let lithemes = $("#themess").find("li");
+        for (let i = 0; i < lis.length; i++) {
             if (pageInfo.indexOf(lis[i].id) > -1) {
                 $("#news").addClass("open");
-                var str = "#" + pageInfo;
+                let str = "#" + pageInfo;
                 $(str).addClass("active");
             }
         }

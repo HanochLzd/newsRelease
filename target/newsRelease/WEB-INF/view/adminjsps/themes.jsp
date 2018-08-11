@@ -32,8 +32,8 @@
             <td>${theme.themeDetail}</td>
             <td>${theme.themeLevel}</td>
             <td>${theme.themeCreateTime}</td>
-            <td><a href="${ctx}/admin/themes/editPage?themeId=${theme.themeId}">编辑</a>|<a
-                    href="${ctx}/admin/themes/delete?themeId=${theme.themeId}" onclick="return confirm('请确认删除');">删除</a></td>
+            <td><a href="${ctx}/admin/themes/editPage?themeId=${theme.themeId}"><button class="btn btn-info " type="button">编辑</button></a>|<a
+                    href="${ctx}/admin/themes/delete?themeId=${theme.themeId}" onclick="return confirm('请确认删除');"><button class="btn btn-warning " type="button">删除</button></a></td>
         </tr>
     </c:forEach>
     </tbody>

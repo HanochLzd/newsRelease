@@ -59,9 +59,6 @@ public class TxProxy implements InvocationHandler {
             assert con != null;
             con.rollback();
             System.err.println(method.getName() + "方法中事务回滚");
-        } finally {
-            assert con != null;
-            con.close();
         }
         return returnValue;
     }

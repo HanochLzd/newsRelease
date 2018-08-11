@@ -42,6 +42,16 @@ public interface NewsDao {
      */
     List<NewsVo> queryAllNewsAll();
 
+
+    /**
+     * 条件查询
+     *
+     * @param type
+     * @param searchContent
+     * @return
+     */
+    List<NewsVo> queryByExample(String type, String searchContent);
+
     /**
      * 主页中查询指定主题的新闻
      *

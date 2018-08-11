@@ -129,8 +129,43 @@ public class NewsDaoImpl implements NewsDao {
     public List<NewsVo> queryAllNewsAll() {
         String sql = "select news_id,theme_name,news_author,news_title,news_content,news_up,news_down,news_create_time " +
                 "from tb_news n,tb_theme t where n.news_theme_id=t.theme_id order by news_create_time desc";
-        List<NewsVo> newsVoList = new ArrayList<>();
         Object[] params = {};
+        return getNewsVoList(sql, params);
+    }
+
+    @Override
+    public List<NewsVo> queryByExample(String type, String searchContent) {
+        String sql1 = "select news_id,theme_name,news_author,news_title,news_content,news_up,news_down,news_create_time " +
+                "from tb_news n,tb_theme t where n.news_theme_id=t.theme_id ";
+        StringBuilder sql = new StringBuilder(sql1);
+        switch (type) {
+            case "theme":
+                int themeId = themeDao.qureyThemeByName(searchContent).getThemeId();
+                sql.append("and n.news_theme_id=").append(themeId);
+                break;
+            case "title":
+                sql.append("and n.news_title like '%").append(searchContent).append("%'");
+                break;
+            case "author":
+                sql.append("and n.news_author like '%").append(searchContent).append("%'");
+                break;
+            default:
+                break;
+        }
+        sql.append(" order by news_create_time desc");
+        Object[] params = {};
+        return getNewsVoList(sql.toString(), params);
+    }
+
+    /**
+     * 查询
+     *
+     * @param sql
+     * @param params
+     * @return
+     */
+    private List<NewsVo> getNewsVoList(String sql, Object[] params) {
+        List<NewsVo> newsVoList = new ArrayList<>();
         try {
             List<Map<String, Object>> mapList = dbUtil.resultSet2List(sql, Arrays.asList(params));
             for (Map<String, Object> objectMap : mapList) {
@@ -311,12 +346,5 @@ public class NewsDaoImpl implements NewsDao {
         Object[] params = {themeId};
         return dbUtil.getCount(sql, Arrays.asList(params));
     }
-
-//    @Override
-//    public int deleteOneTheme(int themeId) {
-//
-//
-//        return 0;
-//    }
 
 }

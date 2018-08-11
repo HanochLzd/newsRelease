@@ -243,7 +243,7 @@ height: 1px;border: 1px solid rgb(67, 177, 252)"></div>
                         },
                     success: function (data) {
                         $("#ul-title")[0].innerHTML = "";
-                        for (var i = 0; i < data.length; i++) {
+                        for (let i = 0; i < data.length; i++) {
                             if (i < 5 && page === 1) {
                                 $("#ul-title")[0].innerHTML += "<li class=\"list-group-item\" style=\"list-style: initial;font-size: 14px\"><a\n" +
                                     "href=\"${ctx}/showNews?newsId=" + data[i].newsId + "\"><b>" + data[i].newsTitle + "</b></a><span\n" +

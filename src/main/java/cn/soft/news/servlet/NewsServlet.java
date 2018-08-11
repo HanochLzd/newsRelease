@@ -9,6 +9,8 @@ import cn.soft.news.dao.impl.NewsDaoImpl;
 import cn.soft.news.dao.impl.ThemeDaoImpl;
 import cn.soft.news.plugin.TxProxy;
 import cn.soft.news.vo.NewsVo;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,7 +28,8 @@ import java.util.UUID;
  * @author Hanoch
  */
 @WebServlet(name = "NewsServlet", urlPatterns = {"/admin/news/queryAll", "/admin/news/delete",
-        "/admin/news/add", "/admin/news/edit", "/admin/news/editPage", "/admin/news/addPage"})
+        "/admin/news/add", "/admin/news/edit", "/admin/news/editPage", "/admin/news/addPage",
+        "/admin/news/queryByExample"})
 public class NewsServlet extends HttpServlet {
 
     private NewsDao newsDao = (NewsDao) TxProxy.bind(new NewsDaoImpl());
@@ -56,9 +59,37 @@ public class NewsServlet extends HttpServlet {
             case "/admin/news/editPage":
                 editPage(request, response);
                 break;
+            case "/admin/news/queryByExample":
+                queryByExample(request, response);
+                break;
             default:
                 break;
         }
+    }
+
+    /**
+     * 按条件查询
+     *
+     * @param request
+     * @param response
+     */
+    private void queryByExample(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        String type = request.getParameter("type");
+        String searchContent = request.getParameter("searchContent");
+        List<NewsVo> newsVoList = newsDao.queryByExample(type, searchContent);
+        JSONArray jsonArray = new JSONArray();
+        for (NewsVo newsVo : newsVoList) {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("newsId", newsVo.getNewsId());
+            jsonObject.put("newsThemeName", newsVo.getNewsThemeName());
+            jsonObject.put("newsAuthor", newsVo.getNewsAuthor());
+            jsonObject.put("newsTitle", newsVo.getNewsTitle());
+            jsonObject.put("newsUp", newsVo.getNewsUp());
+            jsonObject.put("newsDown", newsVo.getNewsDown());
+            jsonObject.put("newsCreateTime", newsVo.getNewsCreateTime());
+            jsonArray.add(jsonObject);
+        }
+        response.getWriter().print(jsonArray);
     }
 
     private void addPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -145,6 +176,7 @@ public class NewsServlet extends HttpServlet {
     private void queryAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<NewsVo> newsVoList = newsDao.queryAllNewsAll();
         request.setAttribute("newsVoList", newsVoList);
+        request.setAttribute("totalNewsCount", newsVoList.size());
         request.setAttribute("pageInfo", "adminnews.jsp");
         request.getRequestDispatcher("/WEB-INF/view/adminjsps/adminindex.jsp").forward(request, response);
     }
