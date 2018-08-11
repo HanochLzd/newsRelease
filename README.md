@@ -1,5 +1,5 @@
 # newsRelease
-<b>新闻发布</b><br>
+<b>新闻发布CRUD</b><br>
 无后台框架、纯Servlet+JSP+Zui+LayerUI等开发<br>
 适合熟悉javaweb项目开发流程及运行流程<br>
 Mysql 使用最新的8.0.11，需注意其连接驱动名<br>
