@@ -29,6 +29,8 @@ public class NewsVo implements Serializable {
     private String newsCreateTime;
 
     public NewsVo() {
+        System.out.println("你是猪！");
+       
     }
 
     public NewsVo(String newsId, Integer newsThemeId, String newsTitle, String newsAuthor, String newsContent,
